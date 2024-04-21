@@ -1,5 +1,5 @@
 {% set name = "tmuxp" %}
-{% set version = "1.46.0" %}
+{% set version = "1.47.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f9a5e9b01e268f0f6c64b6a5bf79275bca243fe9a1d8ffe76d90a20b06b75015
+  sha256: 1d863a08450fa5956f54af64578121c38c0693961f2154a4674faaa9fe8dcf87
 
 build:
   # Seeing weird errors like the following on Windows, along with weird encoding.
@@ -26,7 +26,7 @@ requirements:
     - python >=3.8
     - colorama >=0.3.9
     - pyyaml >=6.0
-    - libtmux >=0.36
+    - libtmux >=0.37
     - __unix
 
 test:
