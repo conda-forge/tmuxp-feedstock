@@ -1,13 +1,13 @@
 {% set name = "tmuxp" %}
-{% set version = "1.47.0" %}
+{% set version = "1.49.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1d863a08450fa5956f54af64578121c38c0693961f2154a4674faaa9fe8dcf87
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 162a761e7c086b4de48626252f9164855a3ce284b43920fd7fbf5b1052c1a0d7
 
 build:
   # Seeing weird errors like the following on Windows, along with weird encoding.
@@ -19,18 +19,19 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
-    - poetry-core >=1.0
+    - hatchling
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - colorama >=0.3.9
     - pyyaml >=6.0
-    - libtmux >=0.37
+    - libtmux >=0.39
     - __unix
 
 test:
   requires:
+    - python {{ python_min }}
     - pip
   files:
     - session.yaml
