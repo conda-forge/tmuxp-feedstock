@@ -19,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - colorama >=0.3.9
     - pyyaml >=6.0
     - libtmux >=0.39
@@ -31,6 +31,7 @@ requirements:
 
 test:
   requires:
+    - python {{ python_min }}
     - pip
   files:
     - session.yaml
