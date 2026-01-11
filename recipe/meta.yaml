@@ -1,5 +1,5 @@
 {% set name = "tmuxp" %}
-{% set version = "1.62.0" %}
+{% set version = "1.63.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6cece0720ff9a29fca07b2330bcbf06720613828f97bd163ff235a9d30dfec19
+  sha256: 0039508a69673a03c7b18f85bd44b1c9cae665220c7490b15263ef48dcfd89ab
 
 build:
   # Seeing weird errors like the following on Windows, along with weird encoding.
