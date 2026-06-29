@@ -17,7 +17,6 @@ Session manager for tmux, which allows users to save and load tmux sessions thro
 configuration files.
 Powered by libtmux.
 
-
 Current build status
 ====================
 
